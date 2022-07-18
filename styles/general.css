@@ -1,0 +1,158 @@
+:root {
+    --darkBlue: #31C3BD;
+    --lightBlue: #65E9E4;
+    --darkYellow: #F2B137;
+    --lightYellow: #FFC860;
+    --darkNavy: #1A2A33;
+    --lightNavy: #1F3641;
+    --darkGrey: #A8BFC9;
+    --lightGrey: #DBE8ED;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: all .3s ease-in-out;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 500;
+    font-size: .875rem;
+    line-height: .8;
+    letter-spacing: .875px;
+    color: var(--darkNavy);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2.5px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    letter-spacing: 1.5px;
+}
+
+h3 {
+    font-size: 1.25rem;
+    letter-spacing: 1.25px;
+}
+
+h4 {
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.btn {
+    color: var(--darkNavy);
+    cursor: pointer;
+    display: block;
+    border-radius: 15px;
+    border: 0;
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 1.25px;
+    padding: .75em 0 .9em;
+    width: 100%;
+}
+
+.secondary-btn {
+    font-size: 1rem;
+    line-height: 1.25;
+    padding: 1em;
+    border-radius: 10px;
+    width: fit-content;
+    color: var(--darkNavy);
+}
+
+.btn-1 {
+    background-color: var(--darkYellow);
+    box-shadow: inset 0px -8px 0px #CC8B13;
+}
+
+.btn-1:hover,
+.btn-1:focus {
+    background: var(--lightYellow);
+    outline: 0;
+}
+
+.btn-2 {
+    background-color: var(--darkBlue);
+    box-shadow: inset 0px -8px 0px #118C87;
+}
+
+.btn-2:hover,
+.btn-2:focus {
+    background: var(--lightBlue);
+    outline: 0;
+}
+
+.secondary-btn-1 {
+    background-color: var(--darkYellow);
+    box-shadow: inset 0px -4px 0px #CC8B13;
+
+}
+
+.secondary-btn-1:hover,
+.secondary-btn-1:focus {
+    background: var(--lightYellow);
+    outline: 0;
+}
+
+.secondary-btn-2 {
+    background-color: var(--darkGrey) ;
+    box-shadow: inset 0px -4px 0px #6B8997;
+}
+
+.secondary-btn-2:hover,
+.secondary-btn-2:focus {
+    background: var(--lightGrey);
+    outline: 0;
+}
+
+.btn-reset {
+    cursor: pointer;
+    display: block;
+    background-color: var(--darkGrey);
+    padding: 1em;
+    box-shadow: inset 0px -4px 0px #6B8997;
+    border-radius: 10px;
+    border: 0ch;
+}
+
+.btn-reset:hover,
+.btn-reset:focus {
+    background-color: var(--lightGrey);
+    outline: 0;
+}
+/* GAME */
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--darkNavy);
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 460px;
+}
