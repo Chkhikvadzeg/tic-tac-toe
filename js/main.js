@@ -81,7 +81,7 @@ const startGame = () => {
                 let randomIndex = Math.floor(Math.random() * emptyCells.length) 
                 let cellIndexOponent = emptyCells[randomIndex]  
                 const oponentImage = document.createElement('img');
-                oponentImage.src = `assets/${chosenX ? 'icon-o' : 'icon-x'}.svg`;
+                oponentImage.src = `../assets/${chosenX ? 'icon-o' : 'icon-x'}.svg`;
                 oponentImage.classList.add(`${chosenX ? 'icon-o' : 'icon-x'}`)
                 cell[cellIndexOponent].replaceChild(oponentImage, cell[cellIndexOponent].querySelector('.cell-hoverImage'));
                 emptyCells.splice(emptyCells.indexOf(cellIndexOponent), 1);
@@ -155,7 +155,7 @@ cancelButton.addEventListener('click', () => {
 })
 
 restartButton.addEventListener('click', () => {
-    result.style.display = 'none';
+    resetWindow.style.display = 'none';
     restartGame();
 })
 
@@ -185,7 +185,7 @@ const putOifXChosen = () => {
     if(!chosenX){
         randomCellInteger = Math.floor(Math.random() * emptyCells.length);
         const image = document.createElement('img');
-        image.src = 'assets/icon-x.svg';
+        image.src = '../assets/icon-x.svg';
         image.classList.add('icon-x');
         cell[randomCellInteger].replaceChild(image, cell[randomCellInteger].querySelector('.cell-hoverImage'))
         emptyCells.splice(randomCellInteger, 1)
