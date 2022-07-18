@@ -64,7 +64,7 @@ cpu.addEventListener('click', () => {
 const startGame = () => {
     cell.forEach(n => n.addEventListener('click', () => {
         const image = document.createElement('img');
-        image.src = `../assets/${chosenX ? 'icon-x.svg' : 'icon-o.svg'}`;
+        image.src = `./assets/${chosenX ? 'icon-x.svg' : 'icon-o.svg'}`;
         image.classList.add(`${chosenX ? 'icon-x' : 'icon-o'}`);
         if(n.childNodes[0] === n.querySelector('.cell-hoverImage')){
             n.removeChild(n.querySelector('.cell-hoverImage'));
@@ -81,7 +81,7 @@ const startGame = () => {
                 let randomIndex = Math.floor(Math.random() * emptyCells.length) 
                 let cellIndexOponent = emptyCells[randomIndex]  
                 const oponentImage = document.createElement('img');
-                oponentImage.src = `../assets/${chosenX ? 'icon-o' : 'icon-x'}.svg`;
+                oponentImage.src = `./assets/${chosenX ? 'icon-o' : 'icon-x'}.svg`;
                 oponentImage.classList.add(`${chosenX ? 'icon-o' : 'icon-x'}`)
                 cell[cellIndexOponent].replaceChild(oponentImage, cell[cellIndexOponent].querySelector('.cell-hoverImage'));
                 emptyCells.splice(emptyCells.indexOf(cellIndexOponent), 1);
@@ -104,7 +104,7 @@ const gameResult = () => {
             }
             const myIcon = document.createElement('img');
             myIcon.classList.add(`${chosenX ? 'icon-x' : 'icon-o'}`);
-            myIcon.src = `../assets/${chosenX ? 'icon-x.svg' : 'icon-o.svg'}`;
+            myIcon.src = `./assets/${chosenX ? 'icon-x.svg' : 'icon-o.svg'}`;
             whoWon.insertAdjacentElement('afterbegin', myIcon);
             whoWon.querySelector('h3').innerHTML = 'TAKES THE ROUND'
             whoWon.querySelector('h3').style.color = `${chosenX ? '#31C3BD' : '#F2B137'}`
@@ -119,7 +119,7 @@ const gameResult = () => {
             }
             const UIIcon = document.createElement('img');
             UIIcon.classList.add(`${chosenX ? 'icon-o' : 'icon-x'}`);
-            UIIcon.src = `../assets/${chosenX ? 'icon-o.svg' : 'icon-x.svg'}`;
+            UIIcon.src = `./assets/${chosenX ? 'icon-o.svg' : 'icon-x.svg'}`;
             whoWon.insertAdjacentElement('afterbegin', UIIcon);
             document.querySelector('.result-result').textContent = 'OH NO, YOU LOST…'
             whoWon.querySelector('h3').innerHTML = 'TAKES THE ROUND'
@@ -175,7 +175,7 @@ const addHoverImages = n => {
     if(n.childNodes.length < 1){
         const hoverImage = document.createElement('img');
         hoverImage.classList.add('cell-hoverImage');
-        hoverImage.src = `../assets/${chosenX ? 'icon-x-outline.svg' : 'icon-o-outline.svg'}`
+        hoverImage.src = `./assets/${chosenX ? 'icon-x-outline.svg' : 'icon-o-outline.svg'}`
         hoverImage.classList.add(`${chosenX ? 'icon-x' : 'icon-o'}`)
         n.appendChild(hoverImage)            
     }
@@ -185,7 +185,7 @@ const putOifXChosen = () => {
     if(!chosenX){
         randomCellInteger = Math.floor(Math.random() * emptyCells.length);
         const image = document.createElement('img');
-        image.src = '../assets/icon-x.svg';
+        image.src = './assets/icon-x.svg';
         image.classList.add('icon-x');
         cell[randomCellInteger].replaceChild(image, cell[randomCellInteger].querySelector('.cell-hoverImage'))
         emptyCells.splice(randomCellInteger, 1)
