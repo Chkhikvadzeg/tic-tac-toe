@@ -57,6 +57,11 @@ cpu.addEventListener('click', () => {
         addHoverImages(n);
     });
 
+    const turnImage = document.createElement('img');
+    turnImage.src = `./assets/${chosenX ? 'icon-x.svg' : 'icon-o.svg'}`;
+    turnImage.classList.add(`${chosenX ? 'x' : 'o'}`)
+    document.querySelector('.queue').insertAdjacentElement('afterbegin', turnImage)
+
     putOifXChosen();
 });
 
